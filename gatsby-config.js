@@ -3,9 +3,9 @@ module.exports = {
     title: `Code Revamp`,
     name: `Code Revamp`,
     siteUrl: `http://coderevamp.com/`,
-    description: `Code Revamp is a simply blog by Houssam Yahiaoui who tries to explain things in Javscript.`,
+    description: `A Houssam Yahiaoui Technical Blog.`,
     hero: {
-      heading: `Welcome to Code Revamp, It's simply another Technical Blog that explains stuff in Javascript`,
+      heading: `Let's write some 🆒 code ~!`,
       maxWidth: 652,
     },
     social: [
@@ -25,23 +25,29 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [],
+      },
+    },
+    {
       resolve: "@narative/gatsby-theme-novela",
       options: {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
         basePath: "/",
         authorsPage: true,
+        mailchimp: true,
         sources: {
-          local: true,
-          // contentful: true,
+          local: true
         },
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `Code Revamp`,
+        short_name: `Code Revamp`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
@@ -50,9 +56,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: 'gatsby-plugin-mailchimp',
       options: {
+        endpoint: 'https://coderevamp.us8.list-manage.com/subscribe/post?u=0eb44a3f2b3dfcbf457e9790d&amp;id=a7fc6d4de2', // add your MC list endpoint here; see plugin repo for instructions
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-164605774-1`
+      }
+    }
   ],
 };
