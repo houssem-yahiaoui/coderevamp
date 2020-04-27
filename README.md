@@ -1,5 +1,5 @@
 # Houssam Yahiaoui Personal Blog
-A minimalistic, simply blog that i will be using for my personal bloging needs, all opinion here are mine, and i will simply wirte about two things : Javascript and Project Management.
+A minimalistic, simply blog that I will be using for my personal bloging needs, **all opinion here are mine**, I will simply wirte about two things : **Javascript** and **Project Management**.
 
 <div>
 <a href="http://coderevamp.com/" target="_blank">
