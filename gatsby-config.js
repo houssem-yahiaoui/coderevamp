@@ -8,8 +8,7 @@ module.exports = {
       heading: `Let's write some 🆒 code ~!`,
       maxWidth: 652,
     },
-    social: [
-      {
+    social: [{
         name: `twitter`,
         url: `https://twitter.com/_hcodex`,
       },
@@ -23,8 +22,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [],
@@ -65,6 +63,34 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-164605774-1`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [{
+          resolve: 'gatsby-remark-audio',
+          options: {
+            preload: 'auto',
+            loop: false,
+            controls: true,
+            muted: false,
+            autoplay: false
+          }
+        }, ]
+      }
+    },
+    {
+      resolve: 'gatsby-remark-video',
+      options: {
+        width: 800,
+        height: 'auto',
+        preload: 'auto',
+        muted: true,
+        autoplay: true,
+        playsinline: true,
+        controls: true,
+        loop: true
       }
     }
   ],
